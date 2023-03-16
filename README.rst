@@ -77,7 +77,7 @@ Now you can set up a protected nginx location like this::
         }
 
         location = /auth {
-            proxy_pass http://localhost:8899;  # or http://mycgi/nginx-auth
+            proxy_pass http://localhost:8899/;  # or http://mycgi/nginx-auth
             proxy_pass_request_body off;
             proxy_set_header Content-Length "";
             proxy_set_header X-Required-Role "superuser";
